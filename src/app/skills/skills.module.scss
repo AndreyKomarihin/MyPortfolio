@@ -1,0 +1,99 @@
+.background {
+
+
+  background-color: black;
+  background-image: url('../../../public/background-skills.png');
+  background-size: auto;
+  background-position: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  margin-top: 50px;
+  font-family: var(--font-quicksand);
+  font-size: 128px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  cursor: default;
+}
+
+.progressBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 150px;
+
+
+  width: 100vw;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.progressText {
+  font-family: var(--font-quicksand);
+  font-size: 3rem;
+  color: white;
+  font-weight: 700;
+  margin-top: 40px;
+  cursor: default;
+}
+
+.card {
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+
+  transform: scale(1) rotate3d(1, 1, 1, 0deg);
+  transform-style: preserve-3d;
+
+  &:hover{
+    scale: 1.05;
+    animation: rotatePulse  0.5s infinite;
+  }
+}
+
+@keyframes rotatePulse {
+  0% { transform: rotate3d(1, 1, 1, 0deg); }
+  50% { transform: rotate3d(1, 1.5, 1, 5deg); }
+  100% { transform: rotate3d(1, -1.2, 1, 0deg); }
+}
+
+.backIcon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .backIcon {
+    display: initial;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .progressBox {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 200px;
+  }
+
+  .progressText {
+    margin-bottom: 150px;
+    font-size: 32px;
+  }
+
+
+}
